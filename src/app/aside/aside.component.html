@@ -2,5 +2,7 @@
     <h2 class="title">
         Recent posts
     </h2>
-    <app-post-list-item *ngFor="let post of postList" [post]="post"></app-post-list-item>
+    <div>
+        <app-post-list-item *ngFor="let post of postList" [post]="post"></app-post-list-item>
+    </div>
 </div>
