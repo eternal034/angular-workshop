@@ -1,38 +1,24 @@
-import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AsideComponent } from './aside/aside.component';
-import { ThemeListComponent } from './theme-list/theme-list.component';
-import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
-import { UserService } from './user.service';
-import { ThemeService } from './theme.service';
-import { PostService } from './post.service';
-import { PostListItemComponent } from './post-list-item/post-list-item.component';
-
+import { CoreModule } from './core/core.module';
+import { ThemeComponent } from './theme/theme.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    AsideComponent,
-    ThemeListComponent,
-    ThemeListItemComponent,
-    PostListItemComponent
+    ThemeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    CoreModule
   ],
-  providers: [UserService,ThemeService,PostService],
-  bootstrap: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
